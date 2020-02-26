@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  myexpressapp:
+    container_name: myexpressapp
+    image: myexpressapp:latest
+    build:
+      context: .
+      dockerfile: image/Dockerfile
+    environment:
+      - PORT=3001
+    ports:
+      - "3001:3001"
